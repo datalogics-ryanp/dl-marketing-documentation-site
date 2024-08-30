@@ -13,7 +13,7 @@
             size="15"
           />
           <span class="truncate text-nowrap">
-            {{ link.title }}
+            {{ link.navtitle || link.title }}
           </span>
           <Icon
             name="lucide:chevron-down"
@@ -46,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import type { NavItem } from '@nuxt/content';
+import type { NavItem } from "@nuxt/content";
 
 const props = defineProps<{
   link: NavItem;
@@ -56,7 +56,9 @@ const props = defineProps<{
 const { collapse } = useConfig().value.aside;
 
 const collapsed = useCollapsedMap();
-const isOpen = ref(collapsed.value.get(props.link._path) || (props.level < 1 && !collapse));
+const isOpen = ref(
+  collapsed.value.get(props.link._path) || (props.level < 1 && !collapse)
+);
 watch(isOpen, (v) => {
   collapsed.value.set(props.link._path, v);
 });

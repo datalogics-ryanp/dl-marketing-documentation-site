@@ -2,12 +2,10 @@ import type { Config } from 'tailwindcss';
 import animate from 'tailwindcss-animate';
 
 export default {
-  darkMode: 'class',
+  darkMode: 'selector',
   safelist: ['dark'],
   prefix: '',
-  content: [
-    './content/**/*',
-  ],
+  content: [],
   theme: {
     container: {
       center: true,
@@ -18,40 +16,75 @@ export default {
     },
     extend: {
       colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
-        },
-        secondary: {
+        'border': 'hsl(var(--border))',
+        'input': 'hsl(var(--input))',
+        'ring': 'hsl(var(--ring))',
+        'background': 'hsl(var(--background))',
+        'foreground': 'hsl(var(--foreground))',
+        'secondary': {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
         },
-        destructive: {
+        'destructive': {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
         },
-        muted: {
+        'muted': {
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))',
         },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-        },
-        popover: {
+        'popover': {
           DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))',
         },
-        card: {
+        'card': {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        'green': {
+          50: '#EFFDF5',
+          100: '#D9FBE8',
+          200: '#B3F5D1',
+          300: '#75EDAE',
+          400: '#00DC82',
+          500: '#00C16A',
+          600: '#00A155',
+          700: '#007F45',
+          800: '#016538',
+          900: '#0A5331',
+          950: '#052e16',
+        },
+        'midnight': {
+          50: '#ecf8ff',
+          100: '#d5edff',
+          200: '#b4e2ff',
+          300: '#81d1ff',
+          400: '#45b5ff',
+          500: '#1b92ff',
+          600: '#0370ff',
+          700: '#0059f8',
+          800: '#0547c8',
+          900: '#0b409d',
+          950: '#051026',
+        },
+        'primary': '#0C70F2',
+        'primary-focus': '#063573',
+        'secondary': '#F224AC',
+        'accent': '#F2A20C',
+        'grey': '#636363',
+        'neutral': '#063573',
+        'base-100': '#051026',
+        'base-content': '#021733',
+        'info': '#FFFFFF',
+        'success': '#36D399',
+        'warning': '#F2D424',
+        'error': '#F23924',
+        'primary-text-content': '#636363',
+        'primary-focus': '#063573',
+        'base-content': '#021733',
+        'primary-content': '#A8CDFB',
       },
+
       borderRadius: {
         xl: 'calc(var(--radius) + 4px)',
         lg: 'var(--radius)',
