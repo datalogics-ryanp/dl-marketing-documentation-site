@@ -70,7 +70,6 @@ const path = computed(() => useRoute().path);
 const categorizedLinks = computed(() => {
   const categories = {};
   navigation.value.forEach((link) => {
-    console.log("Link:", link); // Debugging line to check each link object
     const category = link.category || "Uncategorized";
     if (!categories[category]) {
       categories[category] = [];
