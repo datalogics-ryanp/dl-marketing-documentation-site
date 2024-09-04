@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/icon',
+    '@nuxthq/studio',
     '@nuxtjs/color-mode',
   ],
   shadcn: {
