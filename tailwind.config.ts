@@ -19,7 +19,7 @@ export default {
         'border': '#063573',
         'input': 'hsl(var(--input))',
         'ring': '#0C70F2',
-        'background': '#051026',
+        'background': 'hsl(var(--background))',
         'foreground': 'hsl(var(--foreground))',
         'secondary': {
           DEFAULT: '#0C70F2',
