@@ -17,5 +17,5 @@ actions:
 Welcome to :br Datalogics Documentation
 
 #description
-Create, edit, manage & manipulate PDFs with our Outrageously Unsexy Softwaree.
+Create, edit, manage & manipulate PDFs with our Outrageously Unsexy Software
 ::
