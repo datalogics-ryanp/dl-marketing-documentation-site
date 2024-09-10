@@ -14,8 +14,8 @@ actions:
     leftIcon: lucide:github
 ---
 #title
-Effortless and Beautiful :br Docs Template.
+Welcome to :br Datalogics Documentation
 
 #description
-Beautifully designed Nuxt Content template built with shadcn-vue. :br Customizable. Compatible. Open Source.
+Create, edit, manage & manipulate PDFs with our Outrageously Unsexy Softwaree.
 ::
