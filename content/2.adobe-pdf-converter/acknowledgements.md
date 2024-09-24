@@ -1,7 +1,7 @@
 ---
 title: Software Acknowledgements
 description: Adobe PDF Converter SDK
-icon: null
+icon:
 ---
 
 ## [Dependencies of Adobe PDF Library](/adobe-pdf-library/c-plus-plus/acknowledgements)

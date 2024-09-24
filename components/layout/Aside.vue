@@ -6,7 +6,7 @@
   >
     <LayoutHeaderNavMobile v-if="isMobile" class="mb-5 border-b pb-2" />
     <LayoutSearchButton v-if="config.search.inAside" />
-    <ul v-if="config.aside.useLevel" class="mb-1 border-b pb-4">
+    <ul v-if="config.aside.useLevel" class="mb-1">
       <li
         v-for="(category, categoryIndex) in categorizedLinks"
         :key="categoryIndex"
@@ -16,27 +16,42 @@
         </h3>
         <ul>
           <li v-for="link in category.links" :key="link.id">
-            <NuxtLink
-              :to="link._path"
-              class="mb-1 flex w-full gap-2 rounded-md px-3 py-2 transition-all hover:bg-muted"
-              :class="[
-                path.startsWith(link._path) &&
-                  'bg-muted font-semibold text-primary hover:bg-muted',
-              ]"
-            >
-              <Icon
-                v-if="link.icon"
-                :name="link.icon"
-                class="self-center"
-                size="16"
-              />
-              {{ link.title }}
-            </NuxtLink>
+            <UiCollapsible v-model:open="openStates[link._path]">
+              <UiCollapsibleTrigger class="w-full text-left">
+                <NuxtLink
+                  :to="link._path"
+                  class="mb-1 flex w-full gap-2 rounded-md px-3 py-2 transition-all hover:bg-muted"
+                  :class="[
+                    path.startsWith(link._path) &&
+                      'bg-muted font-semibold text-primary hover:bg-muted',
+                  ]"
+                >
+                  <Icon
+                    v-if="link.icon"
+                    :name="link.icon"
+                    class="self-center"
+                    size="16"
+                  />
+                  {{ link.title }}
+                </NuxtLink>
+              </UiCollapsibleTrigger>
+              <UiCollapsibleContent v-if="link.children">
+                <ul class="pl-4">
+                  <LayoutAsideTreeItem
+                    v-for="childLink in link.children"
+                    :key="childLink._path"
+                    :link="childLink"
+                    :level="1"
+                  />
+                </ul>
+              </UiCollapsibleContent>
+            </UiCollapsible>
           </li>
         </ul>
       </li>
     </ul>
     <LayoutAsideTree
+      v-else
       :links="tree"
       :level="0"
       class="px-3"
@@ -82,12 +97,15 @@ const categorizedLinks = computed(() => {
     links: categories[category],
   }));
 });
+
+// Reactive object to store the open state of each link
+const openStates = ref({});
 </script>
 
 <style scoped>
-.category-header {
-  font-weight: bold;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+/* Add smooth collapsing animation */
+.UiCollapsibleContent {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  overflow: hidden;
 }
 </style>
