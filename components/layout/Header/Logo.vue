@@ -6,7 +6,7 @@
     </NuxtLink>
     <span
       v-if="showTitle && title"
-      class="self-center rounded-md bg-accent px-4 font-bold text-white"
+      class="self-center rounded-md bg-dl-orange px-4 font-bold text-white"
     >
       {{ title }}
     </span>

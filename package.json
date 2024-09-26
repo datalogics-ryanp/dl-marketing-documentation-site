@@ -55,9 +55,13 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.25.1",
+    "@iconify-json/game-icons": "^1.2.0",
     "@iconify-json/icon-park-solid": "^1.2.0",
     "@iconify-json/iconoir": "^1.1.46",
     "@iconify-json/lets-icons": "^1.2.0",
+    "@iconify-json/mdi": "^1.2.0",
+    "@iconify-json/ph": "^1.2.0",
+    "@iconify-json/ri": "^1.2.0",
     "@nuxthq/studio": "^2.0.3",
     "@vueuse/core": "^10.11.1",
     "@vueuse/nuxt": "^10.11.1",

@@ -14,7 +14,7 @@
         :level="0"
         :class="[links.length && 'border-b pb-5']"
       />
-      <div v-if="links" class="pt-5 text-muted-foreground">
+      <div v-if="links" class="pt-5 text-popover-foreground">
         <NuxtLink
           v-for="(link, i) in links"
           :key="i"
@@ -29,7 +29,11 @@
             size="16"
           />
           {{ link.title }}
-          <Icon name="lucide:arrow-up-right" class="ml-auto self-center text-muted-foreground" size="13" />
+          <Icon
+            name="lucide:arrow-up-right"
+            class="ml-auto self-center text-muted-foreground"
+            size="13"
+          />
         </NuxtLink>
       </div>
     </UiScrollArea>
@@ -48,7 +52,11 @@
         />
       </UiCollapsibleTrigger>
       <UiCollapsibleContent>
-        <LayoutTocTree :links="toc.links" :level="0" class="mx-4 mb-3 border-l pl-4 text-sm" />
+        <LayoutTocTree
+          :links="toc.links"
+          :level="0"
+          class="mx-4 mb-3 border-l pl-4 text-sm"
+        />
       </UiCollapsibleContent>
     </UiCollapsible>
   </template>

@@ -15,7 +15,7 @@
         <ProseH1>
           {{ page?.title }}
         </ProseH1>
-        <p class="text-lg text-slate-300">
+        <p class="text-lg text-secondary">
           {{ page?.description }}
         </p>
       </div>
