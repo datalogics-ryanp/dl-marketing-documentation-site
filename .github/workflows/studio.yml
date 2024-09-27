@@ -66,6 +66,9 @@ jobs:
       - name: Create .nuxtrc
         run: echo $'\nautoImport=true\nmodules[]=@nuxthq/studio' >> .nuxtrc
 
+      - name: Wipe Cache
+        run: npm cache clean --force
+
       - name: Generate
         run: npx nuxi build --preset github_pages
         env:
