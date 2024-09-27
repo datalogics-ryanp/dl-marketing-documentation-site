@@ -8,7 +8,6 @@ navigation: false
 actions:
   - name: Get Started
     to: /adobe-pdf-library/release-notes
-    variant: default
   - name: GitHub
     variant: outline
     to: https://github.com/ZTL-UwU/shadcn-docs-nuxt
