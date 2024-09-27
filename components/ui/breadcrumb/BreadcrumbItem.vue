@@ -1,7 +1,7 @@
 <template>
   <li
     :class="
-      cn(' text-primary-content inline-flex items-center gap-1.5', props.class)
+      cn(' text-muted-foreground inline-flex items-center gap-1.5', props.class)
     "
   >
     <slot />

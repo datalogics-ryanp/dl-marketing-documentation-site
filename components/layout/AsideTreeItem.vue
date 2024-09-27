@@ -1,7 +1,7 @@
 <template>
   <li
     class="underline-offset-4 transition-all [&:not(:first-child)]:pt-3"
-    :class="[level > 0 && 'border-l border-primary-focus pl-4']"
+    :class="[level > 0 && 'border-l border-foreground pl-4']"
   >
     <UiCollapsible v-if="link.children" v-model:open="isOpen">
       <UiCollapsibleTrigger class="w-full text-left">
@@ -13,7 +13,7 @@
               ? 'text-white'
               : isActive
               ? 'font-medium text-primary'
-              : 'text-slate-200',
+              : 'text-foreground',
           ]"
         >
           <Icon
@@ -48,7 +48,7 @@
       v-else
       :to="link._path"
       class="flex w-full gap-1 hover:underline"
-      :class="[isActive ? 'font-medium text-primary' : 'text-slate-200']"
+      :class="[isActive ? 'font-medium text-primary' : 'text-foreground']"
     >
       <Icon
         v-if="link.icon"

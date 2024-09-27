@@ -11,7 +11,7 @@
         v-for="(category, categoryIndex) in categorizedLinks"
         :key="categoryIndex"
       >
-        <h3 class="my-3 font-bold text-primary-content">
+        <h3 class="my-3 font-bold text-primary-foreground">
           {{ category.name }}
         </h3>
         <ul>
