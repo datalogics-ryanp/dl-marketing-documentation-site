@@ -1,0 +1,1 @@
+import{k as s,c as e,e as o,D as c}from"./CfOufPl5.js";const l={},n={class:"list-inside list-decimal [&:not(:first-child)]:mt-6 [&:not(:last-child)]:mb-6 [&>li:not(:first-child)]:mt-2"};function r(t,i){return e(),o("ol",n,[c(t.$slots,"default")])}const d=s(l,[["render",r]]);export{d as default};
